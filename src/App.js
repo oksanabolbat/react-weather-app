@@ -19,7 +19,7 @@ function App() {
     city: '',
     description: '',
     icon: '',
-    ready: false,
+    ready: true,
   });
 
   useEffect(() => {
