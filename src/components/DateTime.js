@@ -3,7 +3,7 @@ const DateTime = (props) => {
   //   let shortDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   //   return shortDays[new Date(date * 1000).getDay()];
   // }
-  const shortDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  //   const shortDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   const days = [
     'Sunday',
     'Monday',
