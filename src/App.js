@@ -7,6 +7,7 @@ import WeeklyForecast from './components/WeelkyForecast';
 import { getWeatherData, getWeatherForecast } from './api/api';
 import { Circles } from 'react-loader-spinner';
 import Footer from './components/Footer';
+import { convertResponseDaily } from './helpers/helpers';
 
 function App() {
   const [city, setCity] = useState('');
@@ -21,7 +22,7 @@ function App() {
     icon: '',
     ready: true,
   });
-
+  const [daily, setDaily] = useState([]);
   useEffect(() => {
     if (city !== '') {
       setTodayData({ ready: false });
@@ -37,7 +38,12 @@ function App() {
           ready: true,
         })
       );
-      getWeatherForecast(city, units).then((response) => console.log(response));
+      //  getWeatherForecast(city, units).then((response) => setDaily(response
+
+      //  ));
+      getWeatherForecast(city, units).then((response) =>
+        setDaily(convertResponseDaily(response))
+      );
     }
   }, [city, units]);
 
@@ -72,7 +78,7 @@ function App() {
           units={units}
         />
       )}
-      <WeeklyForecast />
+      {daily.length > 0 && <WeeklyForecast data={daily} />}
       <Footer />
     </div>
   );

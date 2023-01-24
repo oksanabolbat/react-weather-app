@@ -67,7 +67,7 @@ const WeatherToday = (props) => {
           <li>Last updated:</li>
           <li>
             {/* <span>Dayname</span> <span>00:00</span> */}
-            <DateTime date={props.data.time} />
+            <DateTime date={{ date: props.data.time, format: 'long' }} />
           </li>
         </ul>
       </div>
