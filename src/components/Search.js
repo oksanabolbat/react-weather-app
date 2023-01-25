@@ -15,7 +15,6 @@ const Search = (props) => {
   const currLocationHandler = (event) => {
     event.preventDefault();
     navigator.geolocation.getCurrentPosition((position) => {
-      console.log(position);
       getCityNameByCoords(position.coords).then((cityName) =>
         props.updateCity(cityName)
       );
@@ -23,7 +22,7 @@ const Search = (props) => {
     });
   };
   return (
-    <form className="row" onSubmit={submitHandler}>
+    <form className="row justify-content-around" onSubmit={submitHandler}>
       <div className="col-9">
         <input
           className="form-control col-1"

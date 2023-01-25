@@ -6,5 +6,6 @@ export const convertResponseDaily = (response) => {
     tempMin: day.temperature.minimum,
     url: day.condition.icon_url,
     wind: day.wind.speed,
+    condition: day.condition.description,
   }));
 };

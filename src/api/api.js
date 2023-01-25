@@ -37,7 +37,6 @@ export const getWeatherData = (city, units) => {
 };
 
 export const getWeatherForecast = (city, units) => {
-  console.log(city, units);
   return axios
     .get(`https://api.shecodes.io/weather/v1/forecast`, {
       params: {

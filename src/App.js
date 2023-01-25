@@ -38,9 +38,7 @@ function App() {
           ready: true,
         })
       );
-      //  getWeatherForecast(city, units).then((response) => setDaily(response
 
-      //  ));
       getWeatherForecast(city, units).then((response) =>
         setDaily(convertResponseDaily(response))
       );
@@ -49,7 +47,6 @@ function App() {
 
   const updateCity = (city) => {
     setCity(city);
-    console.log(city);
   };
   const changeUnits = (unitsValue) => {
     setUnits(unitsValue);
@@ -78,7 +75,7 @@ function App() {
           units={units}
         />
       )}
-      {daily.length > 0 && <WeeklyForecast data={daily} />}
+      {daily.length > 0 && <WeeklyForecast data={daily} units={units} />}
       <Footer />
     </div>
   );

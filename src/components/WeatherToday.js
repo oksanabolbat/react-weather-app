@@ -3,8 +3,6 @@ import { icons } from '../api/api';
 import DateTime from './DateTime';
 
 const WeatherToday = (props) => {
-  console.log(props.data);
-
   return (
     <div className="row">
       <div className="col-7">
@@ -66,7 +64,6 @@ const WeatherToday = (props) => {
         <ul className="fs-6 lh-2">
           <li>Last updated:</li>
           <li>
-            {/* <span>Dayname</span> <span>00:00</span> */}
             <DateTime date={{ date: props.data.time, format: 'long' }} />
           </li>
         </ul>

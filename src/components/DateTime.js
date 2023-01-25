@@ -1,9 +1,4 @@
 const DateTime = (props) => {
-  // function convertDateToShortDay(date) {
-  //   let shortDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-  //   return shortDays[new Date(date * 1000).getDay()];
-  // }
-  //   const shortDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   const days = [
     ['Sunday', 'Sun'],
     ['Monday', 'Mon'],
@@ -13,7 +8,6 @@ const DateTime = (props) => {
     ['Friday', 'Fri'],
     ['Saturday', 'Sat'],
   ];
-  console.log(props);
 
   let currDate = new Date(props.date.date * 1000);
 
